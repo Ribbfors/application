@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme, GlobalStyle } from "./themes";
+import { BrowserRouter, Route } from "react-router-dom";
+import Navbar from ".//Components/Navbar";
+import Homepage from "./Pages/Homepage";
+import Blog from "./Pages/Blog";
+import BlogPost from "./Pages/BlogPost";
+import Footer from "./Components/Footer";
+import "./Styles/App.css";
 
 function App() {
+  require("dotenv").config();
+  const [theme, setTheme] = useState("dark");
+
+  const myProps = {
+    theme,
+    setTheme,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <BrowserRouter>
+        <GlobalStyle />
+
+        <div className="App">
+          <Navbar {...myProps} />
+          <Route component={Homepage} path="/" exact />
+          <Route component={Blog} path="/blog" exact />
+          <Route component={BlogPost} path="/blog/:slug" exact />
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
