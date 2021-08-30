@@ -19,7 +19,7 @@ const AboutWrapper = styled.div`
   h3 {
     color: ${(props) => props.theme.secondaryTextColor};
     padding: 0.5rem 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     text-align: center;
   }
 
