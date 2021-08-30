@@ -10,7 +10,6 @@ import Footer from "./Components/Footer";
 import "./Styles/App.css";
 
 function App() {
-  require("dotenv").config();
   const [theme, setTheme] = useState("dark");
 
   const myProps = {
@@ -20,7 +19,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <GlobalStyle />
 
         <div className="App">
