@@ -2,7 +2,7 @@
   "name": "application",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://ribbfors.github.io/application/",
+  "homepage": "https://ribbfors.github.io/website/",
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
     "@sanity/block-content-to-react": "^3.0.0",
