@@ -176,7 +176,7 @@
 
 @media screen and (max-width: 600px) {
   .description {
-    position: static;
+    position: relative;
   }
 
   .floating-icons {

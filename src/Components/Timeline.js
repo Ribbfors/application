@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 function Timeline(theme) {
   const MyStory = styled.section`
     min-height: 100vh;
+    overflow: hidden;
   `;
 
   const MyTimeline = styled.div`
