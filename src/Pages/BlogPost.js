@@ -2,13 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../Other/Sanity";
 import BlockContent from "@sanity/block-content-to-react";
-//import ImageUrlBuilder from "@sanity/image-url";
 import styled from "styled-components";
-
-// const urlBuilder = ImageUrlBuilder(sanityClient);
-// function urlFor(source) {
-//   return urlBuilder.image(source);
-// }
 
 const Loading = styled.div`
   min-height: 100vh;
