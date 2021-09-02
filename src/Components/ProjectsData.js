@@ -4,8 +4,8 @@ import * as icon from "@material-ui/icons";
 
 export const ProjectsData = [
   {
-    title: "Ethereum Tracker",
-    url: "https://ribbfors.github.io/EthereumTracker/",
+    title: "Bitcoin Tracker",
+    url: "https://thebitcointracker.netlify.app",
     cName: "project card1",
     image:
       "https://cdn.pixabay.com/photo/2021/05/26/21/46/ethereum-6286513_960_720.jpg",
