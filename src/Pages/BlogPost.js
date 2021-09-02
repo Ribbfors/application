@@ -60,7 +60,7 @@ function BlogPost() {
        }`,
         { slug }
       )
-      .then((data) => setBlogPost(data[0]), console.log(blogPost))
+      .then((data) => setBlogPost(data[0]))
 
       .catch(console.error);
   }, [slug, blogPost]);
@@ -84,6 +84,7 @@ function BlogPost() {
             blocks={blogPost.body}
             projectId={sanityClient.clientConfig.projectId}
             dataset={sanityClient.clientConfig.dataset}
+            style={{maxWidth: "100vw"}}
           />
         </div>
       </BlogPostWrapper>
